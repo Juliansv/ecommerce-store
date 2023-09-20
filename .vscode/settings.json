@@ -3,6 +3,7 @@
         "cloudinary",
         "clsx",
         "headlessui",
-        "lucide"
+        "lucide",
+        "zustand"
     ]
 }
