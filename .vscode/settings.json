@@ -4,6 +4,7 @@
         "clsx",
         "headlessui",
         "lucide",
+        "tailwindcss",
         "zustand"
     ]
 }
