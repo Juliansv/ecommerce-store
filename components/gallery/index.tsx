@@ -12,9 +12,6 @@ interface GalleryProps {
 
 const Gallery: React.FC<GalleryProps> = ({ images }) => {
 
-    console.log("images: ", images);
-    
-	
     return (
         <Tab.Group as="div" className="flex flex-col-reverse">
             <div className="mx-auto mt-6 hidden w-full max-w-2xl sm:block lg:max-w-none">
