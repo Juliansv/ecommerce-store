@@ -35,13 +35,16 @@ const CartItem: React.FC<CartItemProps> = ({ data }) => {
 					<div className="flex justify-between">
 						<p className="text-lg font-semibold text-black">{data.name}</p>
 					</div>
-					<div className=",t-1 flex text-sm">
+					<div className="mt-1 flex text-sm">
 						<p className="text-gray-500">{data.color.name}</p>
 						<p className="text-gray-500 border-l ml-4 border-gray-200 pl-4">
 							{data.size.name}
 						</p>
 					</div>
 					<Currency value={data.price} />
+					<div className="mt-1 flex text-sm text-gray-500">
+						Quantity: {data.quantityCart}
+					</div>
 				</div>
 			</div>
 		</li>
