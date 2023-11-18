@@ -2,7 +2,7 @@
 import Image from "next/image";
 import { Expand, ShoppingCart } from "lucide-react";
 import { useRouter } from "next/navigation";
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 
 import { Product } from "@/types";
 import IconButton from "@/components/ui/icon-button";
@@ -19,6 +19,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 	const router = useRouter();
 	const previewModal = usePreviewModal();
 
+	const [isInCart, setIsInCart] = useState(false);
+
 	const handleClick = () => {
 		router.push(`/product/${data?.id}`);
 	};
@@ -33,6 +35,8 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 		event.stopPropagation();
 
 		cart.addItem(data);
+
+		setIsInCart(true);
 	};
 
 	return (
@@ -54,10 +58,17 @@ const ProductCard: React.FC<ProductCardProps> = ({ data }) => {
 							onClick={onPreview}
 							icon={<Expand size={20} className="text-gray-600" />}
 						/>
-						<IconButton
-							onClick={onAddToCart}
-							icon={<ShoppingCart size={20} className="text-gray-600" />}
-						/>
+						{isInCart ? 
+							<IconButton
+								onClick={onAddToCart}
+								icon={<ShoppingCart size={20} className="text-green-600" />}
+							/>
+						:
+							<IconButton
+								onClick={onAddToCart}
+								icon={<ShoppingCart size={20} className="text-gray-600" />}
+							/>
+						}
 					</div>
 				</div>
 			</div>
