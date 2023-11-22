@@ -38,3 +38,9 @@ export interface Color {
 	name: string;
 	value: string;
 }
+
+export interface Slides {
+	id: string;
+	label: string;
+	imageUrl: string;
+}
