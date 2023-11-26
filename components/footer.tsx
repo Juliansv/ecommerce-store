@@ -1,9 +1,9 @@
 const Footer = () => {
 	return (
-		<footer className="bg-white border-t">
+		<footer className="bg-[#11005C] border-t">
 			<div className="mx-auto py-10">
-				<p className="text-center text-xs text-black">
-					&copy; 2023 Fake Store, All rights reserved
+				<p className="text-center text-xs text-white">
+					&copy; 2023 La Chalita, All rights reserved
 				</p>
 			</div>
 		</footer>
