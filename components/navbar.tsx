@@ -5,7 +5,7 @@ import MainNav from "@/components/main-nav";
 import getCategories from "@/actions/get-categories";
 import NavbarActions from "@/components/navbar-actions";
 import Image from "next/image";
-import logo from "@/public/logo.png"
+import logo from "@/public/logo.svg"
 
 const Navbar = async () => {
 	const categories = await getCategories();
